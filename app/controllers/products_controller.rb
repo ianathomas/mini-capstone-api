@@ -1,11 +1,21 @@
 class ProductsController < ApplicationController
-  def one_product_method
-    @products = Product.first
-    render template: "products/show"
+  def show
+    @product = Product.find_by(id: params["id"])
+    render :show
   end
 
-  def all_products_method
+  def index
     @products = Product.all
-    render template: "products/show"
+    render :index
+  end
+
+  def create
+    @product = Product.create(
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"] 
+    )
+    render :show
   end
 end

@@ -7,11 +7,11 @@
 #   Character.create(name: "Luke", movie: movies.first)
 #Create a Product model (singular!). Some important attributes include name, price (integer), image_url, and description.
 
-product = Product.new(name: "Tshirt", price: 15.99, image_url: "tshirt.com", decsription: "A super sweet Tshirt")
+product = Product.new({name: "Tshirt", price: 15.99, image_url: "tshirt.com", description: "A super sweet Tshirt"})
 product.save
 
-product = Product.new(name: "Pants", price: 25.99, image_url: "pants.com", decsription: "A super sweet pair of pants")
+product = Product.new({name: "Pants", price: 25.99, image_url: "pants.com", description: "A super sweet pair of pants"})
 product.save
 
-product = Product.new(name: "Socks", price: 10.99, image_url: "socks.com", decsription: "A super sweet pair of socks")
+product = Product.new({name: "Socks", price: 10.99, image_url: "socks.com", description: "A super sweet pair of socks"})
 product.save
